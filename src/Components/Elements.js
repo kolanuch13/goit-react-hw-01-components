@@ -1,11 +1,18 @@
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
+import css from '../styles/Statistic.module.css';
 
 const Elements = ({ elements }) => {
     return (
         elements.map(element => (
-            <li className="item" key={element.id}>
-                <span className="label">{element.label}</span>
-                <span className="percentage">{element.percentage}%</span>
+            <li className={clsx(css.item)} key={element.id}>
+                <span className={clsx(css.label)}>{element.label}</span>
+                <figure className={clsx(css.char)} >
+                    <span className="percentage">{element.percentage}%</span>
+                    <svg width="120px" height="120px">
+                        <circle style={{strokeDashoffset: `calc((${element.percentage}*283)/100)`}} className={clsx(css.circle)} cx="140" cy="50" r="45" transform="rotate(-90, 95, 95)"></circle>
+                    </svg>
+                </figure>
             </li>      
         ))
   );

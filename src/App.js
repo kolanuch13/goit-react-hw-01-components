@@ -1,6 +1,6 @@
 import './App.css';
 // components
-import Profile from './Components/Profole';
+import Profile from './Components/Profile';
 import Statistic from './Components/Statistic';
 import Elements from './Components/Elements';
 import FriendList from './Components/Friends';
@@ -23,11 +23,13 @@ function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      <Statistic title="Upload stats">
-        <Elements elements={data}/>
-      </Statistic>
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />;
+      <div className="wrapper">  
+        <Statistic title="Upload stats">
+          <Elements elements={data}/>
+        </Statistic>
+        <FriendList friends={friends} />
+      </div>
+      <TransactionHistory items={transactions} />
     </div>
   )
 }
