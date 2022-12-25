@@ -20,12 +20,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint . --ext js,jsx,ts,tsx --fix"
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kolanuch13/goit-react-hw-01-components"
+    "url": "git+https://github.com/kolanuch13/goit-react-hw-01-components.git"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +46,13 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  }
+  },
+  "description": "Try to do my best 🏴‍☠️",
+  "bugs": {
+    "url": "https://github.com/kolanuch13/goit-react-hw-01-components/issues"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
