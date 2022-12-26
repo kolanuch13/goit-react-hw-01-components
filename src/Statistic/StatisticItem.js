@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import css from '../styles/Statistic.module.css';
+import css from './Statistic.module.css';
 
-const Elements = ({ elements }) => {
+const StatisticItem = ({ elements }) => {
     return (
         elements.map(element => (
             <li className={clsx(css.item)} key={element.id}>
@@ -18,7 +18,7 @@ const Elements = ({ elements }) => {
   );
 }
 
-Elements.propTypes = {
+StatisticItem.propTypes = {
     elements: PropTypes.arrayOf(PropTypes.shape(
         ({
             id: PropTypes.string.isRequired,
@@ -28,4 +28,4 @@ Elements.propTypes = {
     )),
 };
 
-export default Elements;
+export default StatisticItem;

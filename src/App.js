@@ -1,15 +1,14 @@
 import './App.css';
 // components
-import Profile from './Components/Profile';
-import Statistic from './Components/Statistic';
-import Elements from './Components/Elements';
-import FriendList from './Components/Friends';
-import TransactionHistory from './Components/TransactionHistory';
+import Profile from './Profile/Profile';
+import Statistic from './Statistic/Statistic';
+import FriendList from './FriendList/Friends';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 // data
-import user from './data/user.json'
-import data from './data/data.json'
-import friends from "./data/friends.json";
-import transactions from "./data/transactions.json";
+import user from './Profile/user.json'
+import data from './Statistic/data.json'
+import friends from "./FriendList/friends.json";
+import transactions from "./TransactionHistory/transactions.json";
 
 function App() {
   return (
@@ -24,12 +23,10 @@ function App() {
         likes={user.stats.likes}
       />
       <div className="wrapper">  
-        <Statistic title="Upload stats">
-          <Elements elements={data}/>
-        </Statistic>
+        <Statistic title="Upload stats" data={data}/>
         <FriendList friends={friends} />
-      </div>
       <TransactionHistory items={transactions} />
+      </div>
     </div>
   )
 }

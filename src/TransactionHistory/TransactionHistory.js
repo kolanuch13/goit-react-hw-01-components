@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import css from '../styles/TransactionHistory.module.css';
+import css from './TransactionHistory.module.css';
 
 const TransactionHistory = (data) => {
   return (
     <section>
-        <div className={clsx(css.transactionWrapper)}>
-            <table className={clsx(css.transactionHistory)}>
+        <div className={css.transactionWrapper}>
+            <table className={css.transactionHistory}>
                 <thead>
                     <tr>
                         <th>Type</th>
